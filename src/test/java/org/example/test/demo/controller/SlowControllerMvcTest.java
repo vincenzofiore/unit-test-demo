@@ -1,7 +1,6 @@
 package org.example.test.demo.controller;
 
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -41,8 +40,7 @@ class SlowControllerMvcTest {
 	void slowApiTest() throws Exception {
 		// given
 		SlowServiceResponseDTO resp = new SlowServiceResponseDTO();
-		resp.setResult("OK");
-		when(service.slowMethod()).thenReturn(resp);
+		resp.setResult("KO");
 		
 		// when
 	    MockHttpServletRequestBuilder request = get(url);
