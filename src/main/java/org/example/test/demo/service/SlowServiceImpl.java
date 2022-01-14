@@ -19,4 +19,10 @@ public class SlowServiceImpl implements SlowService {
 	    return response;
 	}
 
+	@Override
+	public SlowServiceResponseDTO lessSlowServiceMethod() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
